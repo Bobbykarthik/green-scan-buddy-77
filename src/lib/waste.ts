@@ -68,7 +68,7 @@ export function demoClassify(): Promise<{ type: WasteType; confidence: number }>
   return new Promise((resolve) => {
     const delay = 1800 + Math.random() * 1200;
     setTimeout(() => {
-      const type = WASTE_TYPES[Math.floor(Math.random() * WASTE_TYPES.length)];
+      const type = WASTE_TYPES[Math.floor(Math.random() * WASTE_TYPES.length)]!;
       const confidence = Math.round((82 + Math.random() * 16) * 10) / 10;
       resolve({ type, confidence });
     }, delay);
